@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="hms-login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdC:\Users\tejsaika\Desktop\Patient\hms-login.csselivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="sectionHome">
+    <div class="bg-container">
+      <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="https://res.cloudinary.com/dgk4dcbo6/image/upload/c_thumb,w_200,g_face/v1648912715/hospital-management-system_lczxqn.png"
+                class="logo-hms"/>
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Register
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="doctor-reg-form.html">Doctor</a>
+                <a class="dropdown-item" href="patient-reg-form.html">Patient</a>
+               
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        <div class="d-flex flex-row justify-content-center pt-5 ">
+        <div class="jumbotron ">
+
+          <form id="Login" action="login" method="post">
+          <div class="form-group">
+           <i class="fa fa-user icon"></i>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Name" data-required>
+            </div>
+            <div class="form-group">
+            <i class="fa fa-key icon"></i>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" data-required>
+            </div>
+   
+                  <div class="form-group">
+                    <select name="role" id="inputRole" required="required">						
+                       <option value="admin">ADMIN</option>
+                      <option value="doctor">DOCTOR</option>
+                      <option value="patient">PATIENT</option> 						 
+              </select>            
+                </div>
+                
+            
+            
+            
+            <div class="form-check mr-2">
+              <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+              <label class="form-check-label" for="inlineFormCheck">
+                Remember me
+              </label>
+            </div>
+          <div class="forgot">
+            <a href="reset-pwd">Forgot password?</a>
+      </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+   
+        </form>                                 
+      </div>
+    </div>
+    </div>
+    </div>
+      </body>
+      
+

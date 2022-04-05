@@ -1,0 +1,1011 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 00:53:31 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>5160</td>
+<td title="http-nio-9090-exec-4 thread">http-nio-9090-exec-4</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:26)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 01:05:20 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-11 thread">http-nio-9090-exec-11</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 01:05:20 IST 2022</td>
+</tr>
+
+<tr>
+<td>8101</td>
+<td title="http-nio-9090-exec-2 thread">http-nio-9090-exec-2</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:26)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+
+<tr>
+<td>241695</td>
+<td title="http-nio-9090-exec-11 thread">http-nio-9090-exec-11</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:26)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+
+<tr>
+<td>243353</td>
+<td title="http-nio-9090-exec-13 thread">http-nio-9090-exec-13</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:26)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 01:09:30 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-17 thread">http-nio-9090-exec-17</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 01:09:30 IST 2022</td>
+</tr>
+
+<tr>
+<td>12255</td>
+<td title="http-nio-9090-exec-18 thread">http-nio-9090-exec-18</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 01:14:06 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-27 thread">http-nio-9090-exec-27</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 01:14:07 IST 2022</td>
+</tr>
+
+<tr>
+<td>3207</td>
+<td title="http-nio-9090-exec-11 thread">http-nio-9090-exec-11</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 01:30:32 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-31 thread">http-nio-9090-exec-31</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 01:30:33 IST 2022</td>
+</tr>
+
+<tr>
+<td>21161</td>
+<td title="http-nio-9090-exec-41 thread">http-nio-9090-exec-41</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.EditDoctorServlet category">com.sapient.aem.web.EditDoctorServlet</td>
+<td title="Message">You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">com.sapient.aem.exception.DoctorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:23)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.EditDoctorServlet.doGet(EditDoctorServlet.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.dao.DoctorDaoImpl.getDoctorById(DoctorDaoImpl.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.service.DoctorServiceImpl.getDoctorById(DoctorServiceImpl.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 25 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 02:10:47 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-3 thread">http-nio-9090-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 02:10:48 IST 2022</td>
+</tr>
+
+<tr>
+<td>20233</td>
+<td title="http-nio-9090-exec-6 thread">http-nio-9090-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Roja logged atMon Apr 04 02:11:08 IST 2022</td>
+</tr>
+
+<tr>
+<td>24725</td>
+<td title="http-nio-9090-exec-7 thread">http-nio-9090-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com)]</td>
+</tr>
+
+<tr>
+<td>33942</td>
+<td title="http-nio-9090-exec-8 thread">http-nio-9090-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com)]</td>
+</tr>
+
+<tr>
+<td>44005</td>
+<td title="http-nio-9090-exec-10 thread">http-nio-9090-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com), Doctor(doctorId=2, doctorName=Bhavya, specialization=Medicine, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=3, mobile=9897595895, email=gandhi245@sapient.com), Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com), Doctor(doctorId=5, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=6, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=7, doctorName=Mohan, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=8, doctorName=Mohini, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=9, doctorName=Sowndarya, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=5, mobile=7869048304, email=sow@gmail.com), Doctor(doctorId=10, doctorName=David, specialization=DermaTologist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=7, mobile=7869048304, email=rojas@gmail.com)]</td>
+</tr>
+
+<tr>
+<td>216369</td>
+<td title="http-nio-9090-exec-3 thread">http-nio-9090-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com), Doctor(doctorId=2, doctorName=Bhavya, specialization=Medicine, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=3, mobile=9897595895, email=gandhi245@sapient.com), Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com), Doctor(doctorId=5, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=6, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=7, doctorName=Mohan, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=8, doctorName=Mohini, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=9, doctorName=Sowndarya, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=5, mobile=7869048304, email=sow@gmail.com), Doctor(doctorId=10, doctorName=David, specialization=DermaTologist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=7, mobile=7869048304, email=rojas@gmail.com)]</td>
+</tr>
+
+<tr>
+<td>866797</td>
+<td title="http-nio-9090-exec-6 thread">http-nio-9090-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com), Doctor(doctorId=2, doctorName=Bhavya, specialization=Medicine, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=3, mobile=9897595895, email=gandhi245@sapient.com), Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com), Doctor(doctorId=5, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=6, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=7, doctorName=Mohan, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=8, doctorName=Mohini, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=9, doctorName=Sowndarya, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=5, mobile=7869048304, email=sow@gmail.com), Doctor(doctorId=10, doctorName=David, specialization=DermaTologist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=7, mobile=7869048304, email=rojas@gmail.com)]</td>
+</tr>
+
+<tr>
+<td>947544</td>
+<td title="http-nio-9090-exec-10 thread">http-nio-9090-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com), Doctor(doctorId=2, doctorName=Bhavya, specialization=Medicine, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=3, mobile=9897595895, email=gandhi245@sapient.com), Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com), Doctor(doctorId=5, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=6, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=7, doctorName=Mohan, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=8, doctorName=Mohini, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=9, doctorName=Sowndarya, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=5, mobile=7869048304, email=sow@gmail.com), Doctor(doctorId=10, doctorName=David, specialization=DermaTologist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=7, mobile=7869048304, email=rojas@gmail.com)]</td>
+</tr>
+
+<tr>
+<td>1000589</td>
+<td title="http-nio-9090-exec-4 thread">http-nio-9090-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Roja logged atMon Apr 04 02:27:29 IST 2022</td>
+</tr>
+
+<tr>
+<td>1004480</td>
+<td title="http-nio-9090-exec-6 thread">http-nio-9090-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com)]</td>
+</tr>
+
+<tr>
+<td>1525317</td>
+<td title="http-nio-9090-exec-1 thread">http-nio-9090-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Roja logged atMon Apr 04 02:36:13 IST 2022</td>
+</tr>
+
+<tr>
+<td>1544521</td>
+<td title="http-nio-9090-exec-6 thread">http-nio-9090-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Roja logged atMon Apr 04 02:36:32 IST 2022</td>
+</tr>
+
+<tr>
+<td>1546859</td>
+<td title="http-nio-9090-exec-7 thread">http-nio-9090-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[]</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 14:22:40 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-3 thread">http-nio-9090-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 14:22:42 IST 2022</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 14:33:09 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-15 thread">http-nio-9090-exec-15</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 14:33:09 IST 2022</td>
+</tr>
+
+<tr>
+<td>1402</td>
+<td title="http-nio-9090-exec-16 thread">http-nio-9090-exec-16</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">null</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.lang.NumberFormatException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Integer.parseInt(Integer.java:614)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.GetPatientServlet.doGet(GetPatientServlet.java:29)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+</td></tr>
+
+<tr>
+<td>42987</td>
+<td title="http-nio-9090-exec-12 thread">http-nio-9090-exec-12</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">null</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.lang.NumberFormatException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Integer.parseInt(Integer.java:614)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.sapient.aem.web.GetPatientServlet.doGet(GetPatientServlet.java:29)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Thread.run(Thread.java:834)
+</td></tr>
+
+<tr>
+<td>46155</td>
+<td title="http-nio-9090-exec-7 thread">http-nio-9090-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 14:33:56 IST 2022</td>
+</tr>
+
+<tr>
+<td>51757</td>
+<td title="http-nio-9090-exec-13 thread">http-nio-9090-exec-13</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=10, patientName=Daany, gender=Male, birthdate=2014-06-03, bloodGroup=A+ve, mobile=7869048304, email=rojas@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 14:42:22 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-20 thread">http-nio-9090-exec-20</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 14:42:22 IST 2022</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 14:44:10 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-18 thread">http-nio-9090-exec-18</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 14:44:11 IST 2022</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 14:54:11 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-40 thread">http-nio-9090-exec-40</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Teja logged atMon Apr 04 14:54:11 IST 2022</td>
+</tr>
+
+<tr>
+<td>5066</td>
+<td title="http-nio-9090-exec-35 thread">http-nio-9090-exec-35</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=4, patientName=Indu, gender=Female, birthdate=2011-06-07, bloodGroup=O+ve, mobile=7869048304, email=indu@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>79125</td>
+<td title="http-nio-9090-exec-41 thread">http-nio-9090-exec-41</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=4, patientName=Indu, gender=Female, birthdate=2011-06-07, bloodGroup=O+ve, mobile=7869048304, email=indu@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>128875</td>
+<td title="http-nio-9090-exec-44 thread">http-nio-9090-exec-44</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=4, patientName=Indu, gender=Female, birthdate=2011-06-07, bloodGroup=O+ve, mobile=7869048304, email=indu@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>240544</td>
+<td title="http-nio-9090-exec-47 thread">http-nio-9090-exec-47</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=4, patientName=Indu, gender=Female, birthdate=2011-06-07, bloodGroup=O+ve, mobile=7869048304, email=indu@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>306804</td>
+<td title="http-nio-9090-exec-43 thread">http-nio-9090-exec-43</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=4, patientName=Indu, gender=Female, birthdate=2011-06-07, bloodGroup=O+ve, mobile=7869048304, email=indu@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>309005</td>
+<td title="http-nio-9090-exec-42 thread">http-nio-9090-exec-42</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=4, patientName=Indu, gender=Female, birthdate=2011-06-07, bloodGroup=O+ve, mobile=7869048304, email=indu@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>326441</td>
+<td title="http-nio-9090-exec-49 thread">http-nio-9090-exec-49</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=10, patientName=Daany, gender=Male, birthdate=2014-06-03, bloodGroup=A+ve, mobile=7869048304, email=rojas@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+
+<tr>
+<td>483339</td>
+<td title="http-nio-9090-exec-45 thread">http-nio-9090-exec-45</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.GetAllPatientServlet category">com.sapient.aem.web.GetAllPatientServlet</td>
+<td title="Message">Patient(patientId=10, patientName=Daany, gender=Male, birthdate=2014-06-03, bloodGroup=A+ve, mobile=7869048304, email=rojas@gmail.com, address=7/90/521
+D/o GangaRao
+Dangh Street
+AndhraPradesh)</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Mon Apr 04 15:22:51 IST 2022<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-9090-exec-2 thread">http-nio-9090-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com)]</td>
+</tr>
+
+<tr>
+<td>76876</td>
+<td title="http-nio-9090-exec-9 thread">http-nio-9090-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Sravanthi logged atMon Apr 04 15:25:27 IST 2022</td>
+</tr>
+
+<tr>
+<td>85564</td>
+<td title="http-nio-9090-exec-10 thread">http-nio-9090-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com)]</td>
+</tr>
+
+<tr>
+<td>96961</td>
+<td title="http-nio-9090-exec-1 thread">http-nio-9090-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=1, doctorName=Sandhya, specialization=ENT, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=8, mobile=7869048304, email=gangu@34gmail.com), Doctor(doctorId=2, doctorName=Bhavya, specialization=Medicine, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=3, mobile=9897595895, email=gandhi245@sapient.com), Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com), Doctor(doctorId=5, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=6, doctorName=Suneel, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=4, mobile=7869048304, email=suni234@gmail.com), Doctor(doctorId=7, doctorName=Mohan, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=8, doctorName=Mohini, specialization=OphthalmoLogist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=7869048304, email=mohan23@gmail.com), Doctor(doctorId=9, doctorName=Sowndarya, specialization=NeuroLogist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=5, mobile=7869048304, email=sow@gmail.com), Doctor(doctorId=10, doctorName=David, specialization=DermaTologist, availableTiming=4PM-8PM, qualification=MBBS, experienceInYears=7, mobile=7869048304, email=rojas@gmail.com)]</td>
+</tr>
+
+<tr>
+<td>125761</td>
+<td title="http-nio-9090-exec-5 thread">http-nio-9090-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Sravanthi logged atMon Apr 04 15:26:16 IST 2022</td>
+</tr>
+
+<tr>
+<td>400470</td>
+<td title="http-nio-9090-exec-10 thread">http-nio-9090-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.LoginServlet category">com.sapient.aem.web.LoginServlet</td>
+<td title="Message">Sravanthi logged atMon Apr 04 15:30:51 IST 2022</td>
+</tr>
+
+<tr>
+<td>2615020</td>
+<td title="http-nio-9090-exec-5 thread">http-nio-9090-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.sapient.aem.web.SearchByDocServlet category">com.sapient.aem.web.SearchByDocServlet</td>
+<td title="Message">[Doctor(doctorId=3, doctorName=Geetha, specialization=Dentist, availableTiming=10AM-12PM, qualification=MBBS, experienceInYears=6, mobile=9676105294, email=gandhi245@sapient.com)]</td>
+</tr>
